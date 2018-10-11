@@ -1,0 +1,60 @@
+table {
+  border-collapse: collapse;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+}
+
+tr {
+  align-items: stretch;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+tr.header {
+  border-bottom: none;
+  background-color: rgb(54, 200, 82);
+}
+
+tr.body {
+  border-top: none;
+  border-bottom: 1px solid rgb(20, 114, 68);
+}
+
+th {
+  border-right: 1px solid rgb(20, 114, 68);
+  border-top: 1px solid rgb(20, 114, 68);
+  border-bottom: 1px solid rgb(20, 114, 68);
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+th:first-of-type {
+  border-left: 1px solid rgb(20, 114, 68);
+}
+
+td, th {
+  align-self: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+}
+
+td {
+  border-right: 1px solid rgb(20, 114, 68);
+}
+
+td:first-of-type {
+  border-left: 1px solid rgb(20, 114, 68);
+}
+
+tr:last-of-type {
+  border-bottom: 1px solid rgb(20, 114, 68);
+}
+
+.button-add {
+  float: right;
+  margin-right: 0.5%;
+}

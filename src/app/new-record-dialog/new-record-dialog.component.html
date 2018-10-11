@@ -1,0 +1,19 @@
+<h4 mat-dialog-title>New contact modal</h4>
+<mat-dialog-content class="dialog-content">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" class="form-control" [(ngModel)]="newRecord.name">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" class="form-control" [(ngModel)]="newRecord.phone">
+  </div>
+  <div class="form-group">
+    <label for="desc">Description</label>
+    <input type="text" id="desc" class="form-control" [(ngModel)]="newRecord.desc">
+  </div>
+  <div class="buttons-wrapper">
+    <button class="button-dialog btn btn-success" (click)="onConfirm()">Save</button>
+    <button class="button-dialog btn btn-danger" (click)="onCancel()">Cancel</button>
+  </div>
+</mat-dialog-content>

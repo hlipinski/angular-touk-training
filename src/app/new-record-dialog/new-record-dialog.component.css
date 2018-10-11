@@ -1,0 +1,11 @@
+.dialog-content {
+  overflow: visible;
+}
+
+.buttons-wrapper {
+  padding-top: 10px;
+}
+
+.button-dialog {
+  margin-right: 10px;
+}

@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <table class="table">
+    <tr class="header">
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Description</th>
+    </tr>
+    <tr *ngFor="let record of records" class="body">
+      <td>{{ record.name }}</td>
+      <td>{{ record.phone }}</td>
+      <td>{{ record.desc }}</td>
+    </tr>
+  </table>
+  <div>
+    <button class="button-add btn btn-success" (click)="onAdd()">Add</button>
+  </div>
+</div>
