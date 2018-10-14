@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Record } from "../record/record";
 import { records } from "../record/records";
-import { MatDialog, MatDialogRef } from "@angular/material";
+import { MatDialog } from "@angular/material";
 import { NewRecordDialogComponent } from "../new-record-dialog/new-record-dialog.component";
 
 @Component({
@@ -13,7 +13,8 @@ export class TableComponent implements OnInit {
 
   records: Record[];
 
-  constructor(private dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {
+  }
 
   ngOnInit() {
     this.records = records();
@@ -25,7 +26,7 @@ export class TableComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.records = [result, ...this.records];
+        this.records = [...this.records, result];
       }
     });
   }

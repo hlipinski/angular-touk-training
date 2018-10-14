@@ -26,4 +26,5 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
   bootstrap: [AppComponent],
   entryComponents: [NewRecordDialogComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
