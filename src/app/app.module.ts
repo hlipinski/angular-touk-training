@@ -8,6 +8,7 @@ import { MatDialogModule } from "@angular/material";
 import { NewRecordDialogComponent } from './new-record-dialog/new-record-dialog.component';
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { RecordService } from "./record/record.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     FormsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [RecordService],
   bootstrap: [AppComponent],
   entryComponents: [NewRecordDialogComponent]
 })
