@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Record } from "../record/record";
-import { records } from "../record/records";
 import { MatDialog } from "@angular/material";
 import { NewRecordDialogComponent } from "../new-record-dialog/new-record-dialog.component";
+import { RecordService } from "../record/record.service";
 
 @Component({
   selector: 'app-table',
@@ -13,11 +13,11 @@ export class TableComponent implements OnInit {
 
   records: Record[];
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, private recordService: RecordService) {
   }
 
   ngOnInit() {
-    this.records = records();
+    this.reloadRecords();
   }
 
   onAdd() {
@@ -26,8 +26,13 @@ export class TableComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.records = [...this.records, result];
+        this.recordService.addRecord(result);
+        this.reloadRecords();
       }
     });
+  }
+
+  reloadRecords() {
+    this.records = this.recordService.getRecords();
   }
 }
