@@ -13,7 +13,7 @@ export class TableComponent implements OnInit {
 
   records: Record[];
 
-  constructor(public dialog: MatDialog, private recordService: RecordService) {
+  constructor(private dialog: MatDialog, private recordService: RecordService) {
   }
 
   ngOnInit() {

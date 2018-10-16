@@ -11,7 +11,7 @@ export class NewRecordDialogComponent {
 
   newRecord: Record = { name: '', phone: '' };
 
-  constructor(public dialogRef: MatDialogRef<NewRecordDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: any) {
+  constructor(private dialogRef: MatDialogRef<NewRecordDialogComponent>, @Inject(MAT_DIALOG_DATA) private data: any) {
   }
 
   onConfirm(): void {
