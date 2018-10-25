@@ -9,12 +9,14 @@ import { NewRecordDialogComponent } from './new-record-dialog/new-record-dialog.
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RecordService } from "./record/record.service";
+import { BindingTestComponent } from './binding-test/binding-test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
-    NewRecordDialogComponent
+    NewRecordDialogComponent,
+    BindingTestComponent
   ],
   imports: [
     BrowserModule,
