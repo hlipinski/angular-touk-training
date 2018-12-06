@@ -8,12 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BindingTestComponent implements OnInit {
 
   info = "Binding works!";
-  style = {'color': 'red'};
+  style = { 'background-color': 'red' };
   @Input() input: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  setInfo(info) {
+    this.info = info;
   }
 
 }

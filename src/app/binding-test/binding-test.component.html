@@ -2,4 +2,5 @@
   {{ info }}
 </p>
 <input *ngIf="info==='test'" class="form-control" [(ngModel)]="info">
-<input [ngStyle]="style" class="form-control" [(ngModel)]="input">
+<input [ngStyle]="style" class="form-control" [(ngModel)]="style['background-color']">
+<input *ngIf="info!=='test'" class="form-control" (input)="setInfo($event.target.value)">
